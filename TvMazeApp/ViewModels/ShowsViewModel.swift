@@ -21,6 +21,7 @@ struct ShowsViewModel {
     // MARK: - Outputs
     let isLoading = BehaviorRelay<Bool>(value: false)
     let shows = BehaviorRelay<[Show]>(value: [])
+    let onError = PublishRelay<Error>()
 
     // MARK: - Init
     init(with feedType: FeedType = .all) {
@@ -28,8 +29,12 @@ struct ShowsViewModel {
         setupBindings()
         // Initial Load
         if DBManager.objects(Show.self).isEmpty {
-            refreshTrigger.accept(())
+            fetchShows()
         }
+    }
+
+    func fetchShows() {
+        refreshTrigger.accept(())
     }
 
     func toggleFavorite(for show: Show) {
@@ -66,13 +71,29 @@ private extension ShowsViewModel {
             .disposed(by: bag)
 
         refreshTrigger.asObservable()
-            .flatMapLatest { _ -> Observable<[Show]>in
+            .do(onNext: { _ in
                 self.isLoading.accept(true)
-                return API.Shows.getAll()
+            })
+            .flatMapLatest { _ -> Observable<Void> in
+                API.Shows.getAll()
                     .do(onNext: { _ in self.isLoading.accept(false) },
-                        onError: { _ in self.isLoading.accept(false) })
+                        onError: { error in
+                            self.isLoading.accept(false)
+                            self.onError.accept(error)
+                        })
+                    .materialize()
+                    .mapToVoid()
             }
+
             .subscribe()
             .disposed(by: bag)
+    }
+}
+
+// MARK: - Generic
+public extension ObservableType {
+    /// Discards any element into a void element
+    func mapToVoid() -> Observable<Void> {
+        return map { _ in }
     }
 }

@@ -56,7 +56,22 @@ extension Server {
                         }
 
                     case let .failure(error):
-                        observer.onError(error)
+
+                        if let afError = error.asAFError {
+                            switch afError {
+                            case let .sessionTaskFailed(error):
+                                if error._code == NSURLErrorNotConnectedToInternet {
+                                    observer.onError(APPError.noInternet)
+                                } else {
+                                    fallthrough
+                                }
+                            default:
+                                observer.onError(error)
+                            }
+
+                        } else {
+                            observer.onError(error)
+                        }
                     }
                 })
 

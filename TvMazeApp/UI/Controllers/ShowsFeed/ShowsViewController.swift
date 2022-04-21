@@ -31,7 +31,6 @@ final class ShowsViewController: UIViewController {
         tableView.refreshControl = refreshControl
         tableView.rowHeight = 94
         return tableView
-
     }()
 
     // MARK: - Init
@@ -77,14 +76,23 @@ private extension ShowsViewController {
             })
             .disposed(by: rx.disposeBag)
 
-        viewModel.isLoading
-            .bind(to: refreshControl.rx.isRefreshing)
+        viewModel.onError
+            .asDriver(onErrorJustReturn: APPError.noInternet)
+            .drive(onNext: { [weak self] error in
+                self?.displayAlert(with: error) {
+                    self?.viewModel.fetchShows()
+                }
+            })
             .disposed(by: rx.disposeBag)
 
-        // Refresh
+        // Refresh Control
         refreshControl.rx.controlEvent(.primaryActionTriggered)
             .asObservable()
             .bind(to: viewModel.refreshTrigger)
+            .disposed(by: rx.disposeBag)
+
+        viewModel.isLoading
+            .bind(to: refreshControl.rx.isRefreshing)
             .disposed(by: rx.disposeBag)
     }
 }
