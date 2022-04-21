@@ -8,9 +8,11 @@
 
 /* Begin PBXBuildFile section */
 		76420257AEDD0FB942D0ECFA /* Pods_TvMazeApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5F1BA76E345C3B6CE5B415AD /* Pods_TvMazeApp.framework */; };
+		D80DFEA02810D300001751CC /* ShowsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D80DFE9F2810D300001751CC /* ShowsViewController.swift */; };
+		D80DFEA22810D3C8001751CC /* ShowsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D80DFEA12810D3C8001751CC /* ShowsViewModel.swift */; };
 		D858202C2810C62400B62B44 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D858202B2810C62400B62B44 /* AppDelegate.swift */; };
 		D858202E2810C62400B62B44 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D858202D2810C62400B62B44 /* SceneDelegate.swift */; };
-		D85820302810C62400B62B44 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D858202F2810C62400B62B44 /* ViewController.swift */; };
+		D85820302810C62400B62B44 /* TabViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D858202F2810C62400B62B44 /* TabViewController.swift */; };
 		D85820332810C62400B62B44 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D85820312810C62400B62B44 /* Main.storyboard */; };
 		D85820352810C62600B62B44 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D85820342810C62600B62B44 /* Assets.xcassets */; };
 		D85820382810C62600B62B44 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D85820362810C62600B62B44 /* LaunchScreen.storyboard */; };
@@ -19,10 +21,12 @@
 /* Begin PBXFileReference section */
 		2F72D5F13D435F139CD5F2F9 /* Pods-TvMazeApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TvMazeApp.release.xcconfig"; path = "Target Support Files/Pods-TvMazeApp/Pods-TvMazeApp.release.xcconfig"; sourceTree = "<group>"; };
 		5F1BA76E345C3B6CE5B415AD /* Pods_TvMazeApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TvMazeApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		D80DFE9F2810D300001751CC /* ShowsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShowsViewController.swift; sourceTree = "<group>"; };
+		D80DFEA12810D3C8001751CC /* ShowsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShowsViewModel.swift; sourceTree = "<group>"; };
 		D85820282810C62400B62B44 /* TvMazeApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TvMazeApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D858202B2810C62400B62B44 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D858202D2810C62400B62B44 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		D858202F2810C62400B62B44 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		D858202F2810C62400B62B44 /* TabViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabViewController.swift; sourceTree = "<group>"; };
 		D85820322810C62400B62B44 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		D85820342810C62600B62B44 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D85820372810C62600B62B44 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -56,8 +60,33 @@
 				DAC29F7A1D34A7E026D3E58F /* Pods-TvMazeApp.debug.xcconfig */,
 				2F72D5F13D435F139CD5F2F9 /* Pods-TvMazeApp.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
+			sourceTree = "<group>";
+		};
+		D80DFE9C2810D2B3001751CC /* UI */ = {
+			isa = PBXGroup;
+			children = (
+				D85820312810C62400B62B44 /* Main.storyboard */,
+				D85820362810C62600B62B44 /* LaunchScreen.storyboard */,
+			);
+			path = UI;
+			sourceTree = "<group>";
+		};
+		D80DFE9D2810D2B9001751CC /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				D858202F2810C62400B62B44 /* TabViewController.swift */,
+				D80DFE9F2810D300001751CC /* ShowsViewController.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		D80DFE9E2810D2C2001751CC /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				D80DFEA12810D3C8001751CC /* ShowsViewModel.swift */,
+			);
+			path = ViewModels;
 			sourceTree = "<group>";
 		};
 		D858201F2810C62400B62B44 = {
@@ -81,12 +110,12 @@
 		D858202A2810C62400B62B44 /* TvMazeApp */ = {
 			isa = PBXGroup;
 			children = (
+				D80DFE9E2810D2C2001751CC /* ViewModels */,
+				D80DFE9D2810D2B9001751CC /* Controllers */,
+				D80DFE9C2810D2B3001751CC /* UI */,
 				D858202B2810C62400B62B44 /* AppDelegate.swift */,
 				D858202D2810C62400B62B44 /* SceneDelegate.swift */,
-				D858202F2810C62400B62B44 /* ViewController.swift */,
-				D85820312810C62400B62B44 /* Main.storyboard */,
 				D85820342810C62600B62B44 /* Assets.xcassets */,
-				D85820362810C62600B62B44 /* LaunchScreen.storyboard */,
 				D85820392810C62600B62B44 /* Info.plist */,
 			);
 			path = TvMazeApp;
@@ -207,9 +236,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D85820302810C62400B62B44 /* ViewController.swift in Sources */,
+				D85820302810C62400B62B44 /* TabViewController.swift in Sources */,
 				D858202C2810C62400B62B44 /* AppDelegate.swift in Sources */,
 				D858202E2810C62400B62B44 /* SceneDelegate.swift in Sources */,
+				D80DFEA22810D3C8001751CC /* ShowsViewModel.swift in Sources */,
+				D80DFEA02810D300001751CC /* ShowsViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
