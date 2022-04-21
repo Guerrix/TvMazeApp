@@ -27,6 +27,11 @@
 		D85820382810C62600B62B44 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D85820362810C62600B62B44 /* LaunchScreen.storyboard */; };
 		D89A32392811932E00DA8256 /* UIViewController+.swift in Sources */ = {isa = PBXBuildFile; fileRef = D89A32382811932E00DA8256 /* UIViewController+.swift */; };
 		D89A323B2811939800DA8256 /* Optional+.swift in Sources */ = {isa = PBXBuildFile; fileRef = D89A323A2811939800DA8256 /* Optional+.swift */; };
+		D89A32B92811B10F00DA8256 /* ShowDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D89A32B72811B10F00DA8256 /* ShowDetailViewController.swift */; };
+		D89A32BA2811B10F00DA8256 /* ShowDetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D89A32B82811B10F00DA8256 /* ShowDetailViewController.xib */; };
+		D89A32DA2811C66F00DA8256 /* String+.swift in Sources */ = {isa = PBXBuildFile; fileRef = D89A32D92811C66F00DA8256 /* String+.swift */; };
+		D89A32DC2811C72100DA8256 /* Rx+Operators.swift in Sources */ = {isa = PBXBuildFile; fileRef = D89A32DB2811C72100DA8256 /* Rx+Operators.swift */; };
+		D89A32F62811D7D600DA8256 /* UIColor+.swift in Sources */ = {isa = PBXBuildFile; fileRef = D89A32F52811D7D600DA8256 /* UIColor+.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -53,6 +58,11 @@
 		D85820392810C62600B62B44 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D89A32382811932E00DA8256 /* UIViewController+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+.swift"; sourceTree = "<group>"; };
 		D89A323A2811939800DA8256 /* Optional+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Optional+.swift"; sourceTree = "<group>"; };
+		D89A32B72811B10F00DA8256 /* ShowDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShowDetailViewController.swift; sourceTree = "<group>"; };
+		D89A32B82811B10F00DA8256 /* ShowDetailViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ShowDetailViewController.xib; sourceTree = "<group>"; };
+		D89A32D92811C66F00DA8256 /* String+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+.swift"; sourceTree = "<group>"; };
+		D89A32DB2811C72100DA8256 /* Rx+Operators.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Rx+Operators.swift"; sourceTree = "<group>"; };
+		D89A32F52811D7D600DA8256 /* UIColor+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+.swift"; sourceTree = "<group>"; };
 		DAC29F7A1D34A7E026D3E58F /* Pods-TvMazeApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TvMazeApp.debug.xcconfig"; path = "Target Support Files/Pods-TvMazeApp/Pods-TvMazeApp.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -98,6 +108,7 @@
 		D80DFE9D2810D2B9001751CC /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				D89A32B62811B0DA00DA8256 /* ShowDetail */,
 				D858202F2810C62400B62B44 /* TabViewController.swift */,
 				D80DFF332810EF13001751CC /* ShowsFeed */,
 			);
@@ -230,8 +241,20 @@
 			children = (
 				D89A32382811932E00DA8256 /* UIViewController+.swift */,
 				D89A323A2811939800DA8256 /* Optional+.swift */,
+				D89A32D92811C66F00DA8256 /* String+.swift */,
+				D89A32DB2811C72100DA8256 /* Rx+Operators.swift */,
+				D89A32F52811D7D600DA8256 /* UIColor+.swift */,
 			);
 			path = Extensions;
+			sourceTree = "<group>";
+		};
+		D89A32B62811B0DA00DA8256 /* ShowDetail */ = {
+			isa = PBXGroup;
+			children = (
+				D89A32B72811B10F00DA8256 /* ShowDetailViewController.swift */,
+				D89A32B82811B10F00DA8256 /* ShowDetailViewController.xib */,
+			);
+			path = ShowDetail;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -294,6 +317,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D89A32BA2811B10F00DA8256 /* ShowDetailViewController.xib in Resources */,
 				D85820382810C62600B62B44 /* LaunchScreen.storyboard in Resources */,
 				D85820352810C62600B62B44 /* Assets.xcassets in Resources */,
 				D85820332810C62400B62B44 /* Main.storyboard in Resources */,
@@ -358,9 +382,13 @@
 				D80DFF362810EF3B001751CC /* ShowTableViewCell.swift in Sources */,
 				D858202E2810C62400B62B44 /* SceneDelegate.swift in Sources */,
 				D80DFEB62810E74A001751CC /* ShowDataModel.swift in Sources */,
+				D89A32F62811D7D600DA8256 /* UIColor+.swift in Sources */,
 				D80DFEB32810E1AE001751CC /* DBManager.swift in Sources */,
+				D89A32DA2811C66F00DA8256 /* String+.swift in Sources */,
+				D89A32B92811B10F00DA8256 /* ShowDetailViewController.swift in Sources */,
 				D80DFEAD2810DD32001751CC /* ShowRouter.swift in Sources */,
 				D89A323B2811939800DA8256 /* Optional+.swift in Sources */,
+				D89A32DC2811C72100DA8256 /* Rx+Operators.swift in Sources */,
 				D80DFEA22810D3C8001751CC /* ShowsViewModel.swift in Sources */,
 				D80DFEA02810D300001751CC /* ShowsViewController.swift in Sources */,
 				D80DFEB82810E7FE001751CC /* API.swift in Sources */,
