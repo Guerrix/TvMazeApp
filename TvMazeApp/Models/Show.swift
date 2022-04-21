@@ -13,6 +13,12 @@ final class Show: Object, Mappable {
     @Persisted var id: Int
     @Persisted var name: String
     @Persisted private var mediumImageStringURL: String?
+    @Persisted private var tvmazeStringURL: String?
+    @Persisted private var imdbID: String?
+    @Persisted var language: String
+    @Persisted var summary: String
+    @Persisted var rating: Float
+    @Persisted var genres = List<String>()
     @Persisted var favorited = false
 
     // MARK: - Mappable Init
@@ -32,6 +38,20 @@ extension Show {
         }
         return URL(string: urlString)
     }
+
+    var imdbURL: URL? {
+        guard let imdbID = imdbID else {
+            return nil
+        }
+        return URL(string: "https://www.imdb.com/title/\(imdbID)/")
+    }
+
+    var tvmazeURL: URL? {
+        guard let urlString = tvmazeStringURL else {
+            return nil
+        }
+        return URL(string: urlString)
+    }
 }
 
 // MARK: - Mappable
@@ -40,5 +60,13 @@ extension Show {
         id <- map["id"]
         name <- map["name"]
         mediumImageStringURL <- map["image.medium"]
+        tvmazeStringURL <- map["url"]
+        imdbID <- map["externals.imdb"]
+        rating <- map["rating.average"]
+        language <- map["language"]
+        summary <- map["summary"]
+        var genres = [String]()
+        genres <- map["genres"]
+        self.genres.append(objectsIn: genres)
     }
 }
