@@ -7,7 +7,7 @@
 
 import Foundation
 import ObjectMapper
-
+import RealmSwift
 import RxSwift
 
 struct ShowDataModel {
@@ -18,6 +18,17 @@ struct ShowDataModel {
                 guard let shows = Mapper<Show>().mapArray(JSONObject: json) else {
                     return Observable.error(APIError.parsingError)
                 }
+
+                // Persist Favorited before update from server
+                DBManager.objects(Show.self)
+                    .compactMap { $0 } // Result to Array
+                    .filter { $0.favorited }
+                    .forEach { show in
+                        if let serverShow = shows.first(where: { show.id == $0.id }) {
+                            serverShow.favorited = true
+                        }
+                    }
+
                 DBManager.add(shows)
                 return Observable.just(shows)
             }
