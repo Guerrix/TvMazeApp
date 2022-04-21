@@ -31,6 +31,12 @@ struct ShowsViewModel {
             refreshTrigger.accept(())
         }
     }
+
+    func toggleFavorite(for show: Show) {
+        DBManager.write {
+            show.favorited = !show.favorited
+        }
+    }
 }
 
 // MARK: - FeedType
@@ -66,7 +72,7 @@ private extension ShowsViewModel {
                     .do(onNext: { _ in self.isLoading.accept(false) },
                         onError: { _ in self.isLoading.accept(false) })
             }
-            .bind(to: shows)
+            .subscribe()
             .disposed(by: bag)
     }
 }

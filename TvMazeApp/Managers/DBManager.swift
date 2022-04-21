@@ -45,6 +45,18 @@ class DBManager {
         }
     }
 
+    private func write(block: @escaping () -> Void) {
+        guard let realm = realm else {
+            print("DBManager needs to be initialized first. Call `initialize`")
+            return
+        }
+        DispatchQueue.main.async {
+            try? realm.write {
+                block()
+            }
+        }
+    }
+
     private func objects<Element: Object>(_ type: Element.Type) -> Results<Element> {
         guard let realm = realm else {
             fatalError("DBManager needs to be initialized first. Call `initialize(with eventCode: String)`")
@@ -72,6 +84,10 @@ extension DBManager {
 
     static func add<S: Sequence>(_ objects: S, update: Realm.UpdatePolicy = .modified) where S.Iterator.Element: Object {
         shared.add(objects, update: update)
+    }
+
+    static func write(block: @escaping () -> Void) {
+        shared.write { block() }
     }
 
     // MARK: - Read Reactive
