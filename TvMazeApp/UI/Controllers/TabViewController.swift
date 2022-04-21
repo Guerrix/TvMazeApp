@@ -7,7 +7,7 @@
 
 import UIKit
 
-class TabViewController: UITabBarController {
+final class TabViewController: UITabBarController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -20,7 +20,7 @@ class TabViewController: UITabBarController {
         // Favorites Tab
         let favoritesTab = ShowsViewController(with: .favorite)
         let favoritesNavigationController = UINavigationController(rootViewController: favoritesTab)
-        let favoriteBarItem = UITabBarItem(title: "Favorites", image: UIImage(systemName: "star.fill"), selectedImage: nil)
+        let favoriteBarItem = UITabBarItem(title: "Favorites", image: UIImage(systemName: "suit.heart.fill"), selectedImage: nil)
         favoritesTab.tabBarItem = favoriteBarItem
 
         setViewControllers([allShowsNavigationController, favoritesNavigationController], animated: true)

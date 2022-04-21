@@ -11,7 +11,7 @@ import RxSwift
 import SnapKit
 import UIKit
 
-class ShowsViewController: UIViewController {
+final class ShowsViewController: UIViewController {
     // MARK: - Properties
     private let viewModel: ShowsViewModel
     private var shows: [Show] {
@@ -20,7 +20,7 @@ class ShowsViewController: UIViewController {
 
     // MARK: - UI
     private lazy var refreshControl = UIRefreshControl()
-    
+
     private lazy var tableView: UITableView = {
         let tableView = UITableView(frame: .zero)
         tableView.backgroundColor = .white
@@ -100,6 +100,20 @@ extension ShowsViewController: UITableViewDataSource {
         let show = shows[indexPath.row]
         cell.configure(with: show)
         return cell
+    }
+
+    func tableView(_ tableView: UITableView, trailingSwipeActionsConfigurationForRowAt indexPath: IndexPath) -> UISwipeActionsConfiguration? {
+        var actions = [UIContextualAction]()
+        let show = shows[indexPath.row]
+        let title = show.favorited ? "Delete" : "Favorite"
+        let favAction = UIContextualAction(style: .normal, title: title) { [weak self] _, _, complete in
+            self?.viewModel.toggleFavorite(for: show)
+            complete(true)
+        }
+        favAction.backgroundColor = show.favorited ? .red : .green
+        actions.append(favAction)
+
+        return UISwipeActionsConfiguration(actions: actions)
     }
 }
 

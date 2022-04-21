@@ -84,8 +84,9 @@
 		D80DFE9C2810D2B3001751CC /* UI */ = {
 			isa = PBXGroup;
 			children = (
-				D85820312810C62400B62B44 /* Main.storyboard */,
+				D80DFE9D2810D2B9001751CC /* Controllers */,
 				D85820362810C62600B62B44 /* LaunchScreen.storyboard */,
+				D85820312810C62400B62B44 /* Main.storyboard */,
 			);
 			path = UI;
 			sourceTree = "<group>";
@@ -128,9 +129,9 @@
 		D80DFEA82810DBD2001751CC /* Server */ = {
 			isa = PBXGroup;
 			children = (
-				D80DFEA92810DBDF001751CC /* Server.swift */,
-				D80DFEAE2810DF96001751CC /* APIError.swift */,
 				D80DFEB72810E7FE001751CC /* API.swift */,
+				D80DFEAE2810DF96001751CC /* APIError.swift */,
+				D80DFEA92810DBDF001751CC /* Server.swift */,
 			);
 			path = Server;
 			sourceTree = "<group>";
@@ -146,8 +147,11 @@
 		D80DFEB02810E183001751CC /* Resources */ = {
 			isa = PBXGroup;
 			children = (
-				D80DFEB12810E1A2001751CC /* Managers */,
+				D858202B2810C62400B62B44 /* AppDelegate.swift */,
+				D85820342810C62600B62B44 /* Assets.xcassets */,
 				D80DFFB22810F19A001751CC /* Fonts.swift */,
+				D85820392810C62600B62B44 /* Info.plist */,
+				D858202D2810C62400B62B44 /* SceneDelegate.swift */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -206,14 +210,10 @@
 		D858202A2810C62400B62B44 /* TvMazeApp */ = {
 			isa = PBXGroup;
 			children = (
-				D858202B2810C62400B62B44 /* AppDelegate.swift */,
-				D85820342810C62600B62B44 /* Assets.xcassets */,
-				D80DFE9D2810D2B9001751CC /* Controllers */,
-				D85820392810C62600B62B44 /* Info.plist */,
+				D80DFEB12810E1A2001751CC /* Managers */,
 				D80DFEA32810D87E001751CC /* Models */,
 				D80DFEA72810DBB7001751CC /* Network */,
 				D80DFEB02810E183001751CC /* Resources */,
-				D858202D2810C62400B62B44 /* SceneDelegate.swift */,
 				D80DFE9C2810D2B3001751CC /* UI */,
 				D80DFE9E2810D2C2001751CC /* ViewModels */,
 			);
@@ -498,7 +498,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 742AQUF628;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = TvMazeApp/Info.plist;
+				INFOPLIST_FILE = TvMazeApp/Resources/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
@@ -527,7 +527,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 742AQUF628;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = TvMazeApp/Info.plist;
+				INFOPLIST_FILE = TvMazeApp/Resources/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
