@@ -32,3 +32,17 @@ extension UIViewController {
         }
     }
 }
+
+// MARK: - NavigationBar Appearance
+extension UIViewController {
+    func updateNavigationBar(backgroundColor: UIColor = .white, textColor: UIColor = .black) {
+        let appearance = UINavigationBarAppearance()
+        appearance.configureWithOpaqueBackground()
+        appearance.backgroundColor = backgroundColor
+        appearance.titleTextAttributes = [
+            .foregroundColor: textColor,
+        ]
+        navigationController?.navigationBar.standardAppearance = appearance
+        navigationController?.navigationBar.scrollEdgeAppearance = appearance
+    }
+}
