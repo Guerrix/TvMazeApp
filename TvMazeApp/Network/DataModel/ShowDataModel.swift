@@ -16,7 +16,7 @@ struct ShowDataModel {
         return data
             .flatMapLatest { json -> Observable<[Show]> in
                 guard let shows = Mapper<Show>().mapArray(JSONObject: json) else {
-                    return Observable.error(APIError.parsingError)
+                    return Observable.error(APPError.unableToParseJSON)
                 }
 
                 // Persist Favorited before update from server

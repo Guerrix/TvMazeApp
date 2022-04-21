@@ -16,7 +16,12 @@ struct Server {
     // MARK: - Private Vars
     private static var shared = Server()
     var manager: Session = {
-        Session()
+        let config = URLSessionConfiguration.default
+        // CachePolicy
+        config.requestCachePolicy = .reloadIgnoringLocalCacheData
+        config.urlCache = nil
+
+        return Session(configuration: config)
     }()
 }
 
@@ -40,7 +45,7 @@ extension Server {
                         do {
                             let json = try JSONSerialization.jsonObject(with: data)
                             guard let jsonResult = json as? T else {
-                                return observer.onError(APIError.parsingError)
+                                return observer.onError(APPError.unableToParseJSON)
                             }
 
                             observer.onNext(jsonResult)
