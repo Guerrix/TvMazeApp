@@ -20,7 +20,8 @@ target 'TvMazeApp' do
   pod 'RxCocoa', :project_name => 'Rx'
   pod 'RxSwiftExt', :project_name => 'Rx'
   pod "RxRealm", :project_name => 'Rx'
-  pod 'NSObject+Rx'
+  pod 'NSObject+Rx', :project_name => 'Rx'
+  pod 'RxOptional', :project_name => 'Rx'
 
   # Utils
   pod 'ObjectMapper', :project_name => 'Utils'

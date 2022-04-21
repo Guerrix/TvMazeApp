@@ -17,6 +17,9 @@ PODS:
   - RxCocoa (6.5.0):
     - RxRelay (= 6.5.0)
     - RxSwift (= 6.5.0)
+  - RxOptional (5.0.2):
+    - RxCocoa (~> 6.0)
+    - RxSwift (~> 6.0)
   - RxRealm (5.0.4):
     - Realm (~> 10.21)
     - RealmSwift (~> 10.21)
@@ -43,6 +46,7 @@ DEPENDENCIES:
   - RealmSwift (~> 10)
   - Reusable
   - RxCocoa
+  - RxOptional
   - RxRealm
   - RxSwift
   - RxSwiftExt
@@ -58,6 +62,7 @@ SPEC REPOS:
     - RealmSwift
     - Reusable
     - RxCocoa
+    - RxOptional
     - RxRealm
     - RxRelay
     - RxSwift
@@ -73,12 +78,13 @@ SPEC CHECKSUMS:
   RealmSwift: e72669550d27082aa4fad5d176f5076cfe806245
   Reusable: 6bae6a5e8aa793c9c441db0213c863a64bce9136
   RxCocoa: 94f817b71c07517321eb4f9ad299112ca8af743b
+  RxOptional: 3664964c96b69dd20c9cf78bdfe546615e26eca8
   RxRealm: 666c8785327fe2fff972a3093b35dc7055c1ca38
   RxRelay: 1de1523e604c72b6c68feadedd1af3b1b4d0ecbd
   RxSwift: 5710a9e6b17f3c3d6e40d6e559b9fa1e813b2ef8
   RxSwiftExt: d61c4b9b06e0a448041b1c659e0f1b5c5a035afc
   SnapKit: e01d52ebb8ddbc333eefe2132acf85c8227d9c25
 
-PODFILE CHECKSUM: fd726a831dfd990b2145541a7941814d4aa1ecf4
+PODFILE CHECKSUM: f6683cf6593fc935fccee858516cdfcd7b2aa0af
 
 COCOAPODS: 1.11.2
