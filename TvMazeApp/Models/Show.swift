@@ -30,7 +30,7 @@ final class Show: Object, Mappable {
         return "id"
     }
 }
-
+// MARK: - Expose URL types
 extension Show {
     var mediumImageURL: URL? {
         guard let urlString = mediumImageStringURL else {

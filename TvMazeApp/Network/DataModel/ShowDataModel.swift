@@ -29,7 +29,9 @@ struct ShowDataModel {
                         }
                     }
 
+                // Update Shows from Server
                 DBManager.add(shows)
+
                 return Observable.just(shows)
             }
     }

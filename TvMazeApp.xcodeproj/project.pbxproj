@@ -32,6 +32,7 @@
 		D89A32DA2811C66F00DA8256 /* String+.swift in Sources */ = {isa = PBXBuildFile; fileRef = D89A32D92811C66F00DA8256 /* String+.swift */; };
 		D89A32DC2811C72100DA8256 /* Rx+Operators.swift in Sources */ = {isa = PBXBuildFile; fileRef = D89A32DB2811C72100DA8256 /* Rx+Operators.swift */; };
 		D89A32F62811D7D600DA8256 /* UIColor+.swift in Sources */ = {isa = PBXBuildFile; fileRef = D89A32F52811D7D600DA8256 /* UIColor+.swift */; };
+		D89A32F82811DE8000DA8256 /* ShowDetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D89A32F72811DE8000DA8256 /* ShowDetailViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -63,6 +64,7 @@
 		D89A32D92811C66F00DA8256 /* String+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+.swift"; sourceTree = "<group>"; };
 		D89A32DB2811C72100DA8256 /* Rx+Operators.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Rx+Operators.swift"; sourceTree = "<group>"; };
 		D89A32F52811D7D600DA8256 /* UIColor+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+.swift"; sourceTree = "<group>"; };
+		D89A32F72811DE8000DA8256 /* ShowDetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShowDetailViewModel.swift; sourceTree = "<group>"; };
 		DAC29F7A1D34A7E026D3E58F /* Pods-TvMazeApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TvMazeApp.debug.xcconfig"; path = "Target Support Files/Pods-TvMazeApp/Pods-TvMazeApp.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -119,6 +121,7 @@
 			isa = PBXGroup;
 			children = (
 				D80DFEA12810D3C8001751CC /* ShowsViewModel.swift */,
+				D89A32F72811DE8000DA8256 /* ShowDetailViewModel.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -391,6 +394,7 @@
 				D89A32DC2811C72100DA8256 /* Rx+Operators.swift in Sources */,
 				D80DFEA22810D3C8001751CC /* ShowsViewModel.swift in Sources */,
 				D80DFEA02810D300001751CC /* ShowsViewController.swift in Sources */,
+				D89A32F82811DE8000DA8256 /* ShowDetailViewModel.swift in Sources */,
 				D80DFEB82810E7FE001751CC /* API.swift in Sources */,
 				D80DFEAF2810DF96001751CC /* APPError.swift in Sources */,
 			);

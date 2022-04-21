@@ -84,7 +84,6 @@ private extension ShowsViewModel {
                     .materialize()
                     .mapToVoid()
             }
-
             .subscribe()
             .disposed(by: bag)
     }

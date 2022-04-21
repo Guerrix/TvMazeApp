@@ -20,7 +20,6 @@ final class ShowsViewController: UIViewController {
 
     // MARK: - UI
     private lazy var refreshControl = UIRefreshControl()
-
     private lazy var tableView: UITableView = {
         let tableView = UITableView(frame: .zero)
         tableView.backgroundColor = .white

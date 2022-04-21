@@ -17,10 +17,9 @@ struct Server {
     private static var shared = Server()
     var manager: Session = {
         let config = URLSessionConfiguration.default
-        // CachePolicy
-        config.requestCachePolicy = .reloadIgnoringLocalCacheData
-        config.urlCache = nil
-
+        // CachePolicy: Uncomment if you want to ignore cache policy from Alamofire
+        //config.requestCachePolicy = .reloadIgnoringLocalCacheData
+        //config.urlCache = nil
         return Session(configuration: config)
     }()
 }

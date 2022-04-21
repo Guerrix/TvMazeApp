@@ -8,7 +8,7 @@
 import Foundation
 import RealmSwift
 
-class DBManager {
+final class DBManager {
     // MARK: Properties
     fileprivate var realm: Realm?
 
@@ -18,7 +18,7 @@ class DBManager {
     }
 
     // MARK: Shared Instance
-    fileprivate static let shared = DBManager()
+    private static let shared = DBManager()
 
     // MARK: Adding and Creating objects
     private func add(_ object: Object, update: Realm.UpdatePolicy = .modified) {
@@ -45,6 +45,7 @@ class DBManager {
         }
     }
 
+    // MARK: - Wrinte
     private func write(block: @escaping () -> Void) {
         guard let realm = realm else {
             print("DBManager needs to be initialized first. Call `initialize`")
@@ -57,6 +58,7 @@ class DBManager {
         }
     }
 
+    // MARK: - Read
     private func objects<Element: Object>(_ type: Element.Type) -> Results<Element> {
         guard let realm = realm else {
             fatalError("DBManager needs to be initialized first. Call `initialize(with eventCode: String)`")
@@ -76,6 +78,7 @@ class DBManager {
     }
 }
 
+// MARK: - Public API
 extension DBManager {
     // MARK: Adding and Creating objects
     static func add(_ object: Object, update: Realm.UpdatePolicy = .modified) {
@@ -86,6 +89,7 @@ extension DBManager {
         shared.add(objects, update: update)
     }
 
+    // MARK: - Write
     static func write(block: @escaping () -> Void) {
         shared.write { block() }
     }
