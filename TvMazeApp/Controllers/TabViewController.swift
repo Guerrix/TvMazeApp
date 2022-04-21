@@ -17,7 +17,6 @@ class TabViewController: UITabBarController {
         let allShowsBarItem = UITabBarItem(title: "Shows", image: UIImage(systemName: "film"), selectedImage: nil)
         allShowsTab.tabBarItem = allShowsBarItem
 
-
         // Favorites Tab
         let favoritesTab = ShowsViewController(with: .favorite)
         let favoritesNavigationController = UINavigationController(rootViewController: favoritesTab)
