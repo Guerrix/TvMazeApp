@@ -13,7 +13,7 @@
 		D80DFEA62810D896001751CC /* Show.swift in Sources */ = {isa = PBXBuildFile; fileRef = D80DFEA52810D896001751CC /* Show.swift */; };
 		D80DFEAA2810DBDF001751CC /* Server.swift in Sources */ = {isa = PBXBuildFile; fileRef = D80DFEA92810DBDF001751CC /* Server.swift */; };
 		D80DFEAD2810DD32001751CC /* ShowRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = D80DFEAC2810DD32001751CC /* ShowRouter.swift */; };
-		D80DFEAF2810DF96001751CC /* APIError.swift in Sources */ = {isa = PBXBuildFile; fileRef = D80DFEAE2810DF96001751CC /* APIError.swift */; };
+		D80DFEAF2810DF96001751CC /* APPError.swift in Sources */ = {isa = PBXBuildFile; fileRef = D80DFEAE2810DF96001751CC /* APPError.swift */; };
 		D80DFEB32810E1AE001751CC /* DBManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D80DFEB22810E1AE001751CC /* DBManager.swift */; };
 		D80DFEB62810E74A001751CC /* ShowDataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D80DFEB52810E74A001751CC /* ShowDataModel.swift */; };
 		D80DFEB82810E7FE001751CC /* API.swift in Sources */ = {isa = PBXBuildFile; fileRef = D80DFEB72810E7FE001751CC /* API.swift */; };
@@ -25,6 +25,8 @@
 		D85820332810C62400B62B44 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D85820312810C62400B62B44 /* Main.storyboard */; };
 		D85820352810C62600B62B44 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D85820342810C62600B62B44 /* Assets.xcassets */; };
 		D85820382810C62600B62B44 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D85820362810C62600B62B44 /* LaunchScreen.storyboard */; };
+		D89A32392811932E00DA8256 /* UIViewController+.swift in Sources */ = {isa = PBXBuildFile; fileRef = D89A32382811932E00DA8256 /* UIViewController+.swift */; };
+		D89A323B2811939800DA8256 /* Optional+.swift in Sources */ = {isa = PBXBuildFile; fileRef = D89A323A2811939800DA8256 /* Optional+.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -35,7 +37,7 @@
 		D80DFEA52810D896001751CC /* Show.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Show.swift; sourceTree = "<group>"; };
 		D80DFEA92810DBDF001751CC /* Server.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Server.swift; sourceTree = "<group>"; };
 		D80DFEAC2810DD32001751CC /* ShowRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShowRouter.swift; sourceTree = "<group>"; };
-		D80DFEAE2810DF96001751CC /* APIError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIError.swift; sourceTree = "<group>"; };
+		D80DFEAE2810DF96001751CC /* APPError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APPError.swift; sourceTree = "<group>"; };
 		D80DFEB22810E1AE001751CC /* DBManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DBManager.swift; sourceTree = "<group>"; };
 		D80DFEB52810E74A001751CC /* ShowDataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShowDataModel.swift; sourceTree = "<group>"; };
 		D80DFEB72810E7FE001751CC /* API.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = API.swift; sourceTree = "<group>"; };
@@ -49,6 +51,8 @@
 		D85820342810C62600B62B44 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D85820372810C62600B62B44 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		D85820392810C62600B62B44 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D89A32382811932E00DA8256 /* UIViewController+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+.swift"; sourceTree = "<group>"; };
+		D89A323A2811939800DA8256 /* Optional+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Optional+.swift"; sourceTree = "<group>"; };
 		DAC29F7A1D34A7E026D3E58F /* Pods-TvMazeApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TvMazeApp.debug.xcconfig"; path = "Target Support Files/Pods-TvMazeApp/Pods-TvMazeApp.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -130,7 +134,7 @@
 			isa = PBXGroup;
 			children = (
 				D80DFEB72810E7FE001751CC /* API.swift */,
-				D80DFEAE2810DF96001751CC /* APIError.swift */,
+				D80DFEAE2810DF96001751CC /* APPError.swift */,
 				D80DFEA92810DBDF001751CC /* Server.swift */,
 			);
 			path = Server;
@@ -147,6 +151,7 @@
 		D80DFEB02810E183001751CC /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				D89A32372811931A00DA8256 /* Extensions */,
 				D858202B2810C62400B62B44 /* AppDelegate.swift */,
 				D85820342810C62600B62B44 /* Assets.xcassets */,
 				D80DFFB22810F19A001751CC /* Fonts.swift */,
@@ -218,6 +223,15 @@
 				D80DFE9E2810D2C2001751CC /* ViewModels */,
 			);
 			path = TvMazeApp;
+			sourceTree = "<group>";
+		};
+		D89A32372811931A00DA8256 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				D89A32382811932E00DA8256 /* UIViewController+.swift */,
+				D89A323A2811939800DA8256 /* Optional+.swift */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -337,6 +351,7 @@
 			files = (
 				D80DFFB32810F19A001751CC /* Fonts.swift in Sources */,
 				D80DFEAA2810DBDF001751CC /* Server.swift in Sources */,
+				D89A32392811932E00DA8256 /* UIViewController+.swift in Sources */,
 				D80DFEA62810D896001751CC /* Show.swift in Sources */,
 				D85820302810C62400B62B44 /* TabViewController.swift in Sources */,
 				D858202C2810C62400B62B44 /* AppDelegate.swift in Sources */,
@@ -345,10 +360,11 @@
 				D80DFEB62810E74A001751CC /* ShowDataModel.swift in Sources */,
 				D80DFEB32810E1AE001751CC /* DBManager.swift in Sources */,
 				D80DFEAD2810DD32001751CC /* ShowRouter.swift in Sources */,
+				D89A323B2811939800DA8256 /* Optional+.swift in Sources */,
 				D80DFEA22810D3C8001751CC /* ShowsViewModel.swift in Sources */,
 				D80DFEA02810D300001751CC /* ShowsViewController.swift in Sources */,
 				D80DFEB82810E7FE001751CC /* API.swift in Sources */,
-				D80DFEAF2810DF96001751CC /* APIError.swift in Sources */,
+				D80DFEAF2810DF96001751CC /* APPError.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
