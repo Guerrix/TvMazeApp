@@ -89,11 +89,3 @@ private extension ShowsViewModel {
             .disposed(by: bag)
     }
 }
-
-// MARK: - Generic
-public extension ObservableType {
-    /// Discards any element into a void element
-    func mapToVoid() -> Observable<Void> {
-        return map { _ in }
-    }
-}

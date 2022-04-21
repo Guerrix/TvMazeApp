@@ -49,6 +49,11 @@ final class ShowsViewController: UIViewController {
         configureUI()
         setupBindings()
     }
+
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        updateNavigationBar(backgroundColor: .electricPurple, textColor: .white)
+    }
 }
 
 // MARK: - Private API
@@ -129,5 +134,8 @@ extension ShowsViewController: UITableViewDataSource {
 extension ShowsViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: true)
+        let show = shows[indexPath.row]
+        let controller = ShowDetailViewController(with: show)
+        navigationController?.pushViewController(controller, animated: true)
     }
 }

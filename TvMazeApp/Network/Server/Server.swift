@@ -51,7 +51,6 @@ extension Server {
                             observer.onNext(jsonResult)
                             observer.onCompleted()
                         } catch {
-                            print("Error while decoding response: \(error) from: \(String(data: data, encoding: .utf8) ?? "N/A")")
                             observer.onError(error)
                         }
 
