@@ -10,6 +10,15 @@
 		76420257AEDD0FB942D0ECFA /* Pods_TvMazeApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5F1BA76E345C3B6CE5B415AD /* Pods_TvMazeApp.framework */; };
 		D80DFEA02810D300001751CC /* ShowsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D80DFE9F2810D300001751CC /* ShowsViewController.swift */; };
 		D80DFEA22810D3C8001751CC /* ShowsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D80DFEA12810D3C8001751CC /* ShowsViewModel.swift */; };
+		D80DFEA62810D896001751CC /* Show.swift in Sources */ = {isa = PBXBuildFile; fileRef = D80DFEA52810D896001751CC /* Show.swift */; };
+		D80DFEAA2810DBDF001751CC /* Server.swift in Sources */ = {isa = PBXBuildFile; fileRef = D80DFEA92810DBDF001751CC /* Server.swift */; };
+		D80DFEAD2810DD32001751CC /* ShowRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = D80DFEAC2810DD32001751CC /* ShowRouter.swift */; };
+		D80DFEAF2810DF96001751CC /* APIError.swift in Sources */ = {isa = PBXBuildFile; fileRef = D80DFEAE2810DF96001751CC /* APIError.swift */; };
+		D80DFEB32810E1AE001751CC /* DBManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D80DFEB22810E1AE001751CC /* DBManager.swift */; };
+		D80DFEB62810E74A001751CC /* ShowDataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D80DFEB52810E74A001751CC /* ShowDataModel.swift */; };
+		D80DFEB82810E7FE001751CC /* API.swift in Sources */ = {isa = PBXBuildFile; fileRef = D80DFEB72810E7FE001751CC /* API.swift */; };
+		D80DFF362810EF3B001751CC /* ShowTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D80DFF352810EF3B001751CC /* ShowTableViewCell.swift */; };
+		D80DFFB32810F19A001751CC /* Fonts.swift in Sources */ = {isa = PBXBuildFile; fileRef = D80DFFB22810F19A001751CC /* Fonts.swift */; };
 		D858202C2810C62400B62B44 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D858202B2810C62400B62B44 /* AppDelegate.swift */; };
 		D858202E2810C62400B62B44 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D858202D2810C62400B62B44 /* SceneDelegate.swift */; };
 		D85820302810C62400B62B44 /* TabViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D858202F2810C62400B62B44 /* TabViewController.swift */; };
@@ -23,6 +32,15 @@
 		5F1BA76E345C3B6CE5B415AD /* Pods_TvMazeApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TvMazeApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D80DFE9F2810D300001751CC /* ShowsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShowsViewController.swift; sourceTree = "<group>"; };
 		D80DFEA12810D3C8001751CC /* ShowsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShowsViewModel.swift; sourceTree = "<group>"; };
+		D80DFEA52810D896001751CC /* Show.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Show.swift; sourceTree = "<group>"; };
+		D80DFEA92810DBDF001751CC /* Server.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Server.swift; sourceTree = "<group>"; };
+		D80DFEAC2810DD32001751CC /* ShowRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShowRouter.swift; sourceTree = "<group>"; };
+		D80DFEAE2810DF96001751CC /* APIError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIError.swift; sourceTree = "<group>"; };
+		D80DFEB22810E1AE001751CC /* DBManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DBManager.swift; sourceTree = "<group>"; };
+		D80DFEB52810E74A001751CC /* ShowDataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShowDataModel.swift; sourceTree = "<group>"; };
+		D80DFEB72810E7FE001751CC /* API.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = API.swift; sourceTree = "<group>"; };
+		D80DFF352810EF3B001751CC /* ShowTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShowTableViewCell.swift; sourceTree = "<group>"; };
+		D80DFFB22810F19A001751CC /* Fonts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Fonts.swift; sourceTree = "<group>"; };
 		D85820282810C62400B62B44 /* TvMazeApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TvMazeApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D858202B2810C62400B62B44 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D858202D2810C62400B62B44 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -76,7 +94,7 @@
 			isa = PBXGroup;
 			children = (
 				D858202F2810C62400B62B44 /* TabViewController.swift */,
-				D80DFE9F2810D300001751CC /* ShowsViewController.swift */,
+				D80DFF332810EF13001751CC /* ShowsFeed */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -87,6 +105,84 @@
 				D80DFEA12810D3C8001751CC /* ShowsViewModel.swift */,
 			);
 			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		D80DFEA32810D87E001751CC /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				D80DFEA52810D896001751CC /* Show.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		D80DFEA72810DBB7001751CC /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				D80DFEB42810E728001751CC /* DataModel */,
+				D80DFEAB2810DD17001751CC /* Routers */,
+				D80DFEA82810DBD2001751CC /* Server */,
+			);
+			path = Network;
+			sourceTree = "<group>";
+		};
+		D80DFEA82810DBD2001751CC /* Server */ = {
+			isa = PBXGroup;
+			children = (
+				D80DFEA92810DBDF001751CC /* Server.swift */,
+				D80DFEAE2810DF96001751CC /* APIError.swift */,
+				D80DFEB72810E7FE001751CC /* API.swift */,
+			);
+			path = Server;
+			sourceTree = "<group>";
+		};
+		D80DFEAB2810DD17001751CC /* Routers */ = {
+			isa = PBXGroup;
+			children = (
+				D80DFEAC2810DD32001751CC /* ShowRouter.swift */,
+			);
+			path = Routers;
+			sourceTree = "<group>";
+		};
+		D80DFEB02810E183001751CC /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				D80DFEB12810E1A2001751CC /* Managers */,
+				D80DFFB22810F19A001751CC /* Fonts.swift */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		D80DFEB12810E1A2001751CC /* Managers */ = {
+			isa = PBXGroup;
+			children = (
+				D80DFEB22810E1AE001751CC /* DBManager.swift */,
+			);
+			path = Managers;
+			sourceTree = "<group>";
+		};
+		D80DFEB42810E728001751CC /* DataModel */ = {
+			isa = PBXGroup;
+			children = (
+				D80DFEB52810E74A001751CC /* ShowDataModel.swift */,
+			);
+			path = DataModel;
+			sourceTree = "<group>";
+		};
+		D80DFF332810EF13001751CC /* ShowsFeed */ = {
+			isa = PBXGroup;
+			children = (
+				D80DFF342810EF1E001751CC /* Cells */,
+				D80DFE9F2810D300001751CC /* ShowsViewController.swift */,
+			);
+			path = ShowsFeed;
+			sourceTree = "<group>";
+		};
+		D80DFF342810EF1E001751CC /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				D80DFF352810EF3B001751CC /* ShowTableViewCell.swift */,
+			);
+			path = Cells;
 			sourceTree = "<group>";
 		};
 		D858201F2810C62400B62B44 = {
@@ -110,13 +206,16 @@
 		D858202A2810C62400B62B44 /* TvMazeApp */ = {
 			isa = PBXGroup;
 			children = (
-				D80DFE9E2810D2C2001751CC /* ViewModels */,
-				D80DFE9D2810D2B9001751CC /* Controllers */,
-				D80DFE9C2810D2B3001751CC /* UI */,
 				D858202B2810C62400B62B44 /* AppDelegate.swift */,
-				D858202D2810C62400B62B44 /* SceneDelegate.swift */,
 				D85820342810C62600B62B44 /* Assets.xcassets */,
+				D80DFE9D2810D2B9001751CC /* Controllers */,
 				D85820392810C62600B62B44 /* Info.plist */,
+				D80DFEA32810D87E001751CC /* Models */,
+				D80DFEA72810DBB7001751CC /* Network */,
+				D80DFEB02810E183001751CC /* Resources */,
+				D858202D2810C62400B62B44 /* SceneDelegate.swift */,
+				D80DFE9C2810D2B3001751CC /* UI */,
+				D80DFE9E2810D2C2001751CC /* ViewModels */,
 			);
 			path = TvMazeApp;
 			sourceTree = "<group>";
@@ -236,11 +335,20 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D80DFFB32810F19A001751CC /* Fonts.swift in Sources */,
+				D80DFEAA2810DBDF001751CC /* Server.swift in Sources */,
+				D80DFEA62810D896001751CC /* Show.swift in Sources */,
 				D85820302810C62400B62B44 /* TabViewController.swift in Sources */,
 				D858202C2810C62400B62B44 /* AppDelegate.swift in Sources */,
+				D80DFF362810EF3B001751CC /* ShowTableViewCell.swift in Sources */,
 				D858202E2810C62400B62B44 /* SceneDelegate.swift in Sources */,
+				D80DFEB62810E74A001751CC /* ShowDataModel.swift in Sources */,
+				D80DFEB32810E1AE001751CC /* DBManager.swift in Sources */,
+				D80DFEAD2810DD32001751CC /* ShowRouter.swift in Sources */,
 				D80DFEA22810D3C8001751CC /* ShowsViewModel.swift in Sources */,
 				D80DFEA02810D300001751CC /* ShowsViewController.swift in Sources */,
+				D80DFEB82810E7FE001751CC /* API.swift in Sources */,
+				D80DFEAF2810DF96001751CC /* APIError.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
